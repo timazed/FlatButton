@@ -17,7 +17,7 @@ internal extension CALayer {
             animation.fromValue = value(forKey: keyPath)
             animation.duration = duration
             animation.isRemovedOnCompletion = false
-            animation.fillMode = kCAFillModeForwards
+            animation.fillMode = CAMediaTimingFillMode.forwards
             add(animation, forKey: keyPath)
             setValue(color, forKey: keyPath)
         }
@@ -371,7 +371,7 @@ open class FlatButton: NSButton, CALayerDelegate {
         }
     }
     
-    override open func layer(_ layer: CALayer, shouldInheritContentsScale newScale: CGFloat, from window: NSWindow) -> Bool {
+    open func layer(_ layer: CALayer, shouldInheritContentsScale newScale: CGFloat, from window: NSWindow) -> Bool {
         return true
     }
     
