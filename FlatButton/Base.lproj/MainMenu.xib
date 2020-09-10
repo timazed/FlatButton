@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -690,19 +691,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button identifier="Trim" verticalHuggingPriority="750" tag="2" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nbi-nY-6DS" customClass="FlatButton" customModule="FlatButton_Example" customModuleProvider="target">
-                        <rect key="frame" x="191" y="110" width="99" height="50"/>
+                        <rect key="frame" x="140" y="110" width="200" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="u9e-t7-uRa"/>
-                            <constraint firstAttribute="width" constant="99" id="zeu-GX-ojb"/>
+                            <constraint firstAttribute="width" constant="200" id="zeu-GX-ojb"/>
                         </constraints>
-                        <buttonCell key="cell" type="square" title="Trim" bezelStyle="shadowlessSquare" image="trim" imagePosition="leading" alignment="center" alternateImage="trim" state="on" inset="2" id="5JA-u0-aPs">
+                        <buttonCell key="cell" type="square" title="Triming this" bezelStyle="shadowlessSquare" image="trim" imagePosition="leading" alignment="center" alternateImage="trim" state="on" inset="2" id="5JA-u0-aPs">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="controlContent" size="11"/>
                         </buttonCell>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="momentary" value="NO"/>
                             <userDefinedRuntimeAttribute type="color" keyPath="activeButtonColor">
-                                <color key="value" red="0.98429246020000005" green="0.98429246020000005" blue="0.98429246020000005" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="value" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
                                 <color key="value" red="0.98429246020000005" green="0.98429246020000005" blue="0.98429246020000005" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
