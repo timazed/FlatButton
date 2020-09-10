@@ -17,7 +17,7 @@ internal extension CALayer {
             animation.fromValue = value(forKey: keyPath)
             animation.duration = duration
             animation.isRemovedOnCompletion = false
-            animation.fillMode = CAMediaTimingFillMode.forwards
+            animation.fillMode = kCAFillModeForwards
             add(animation, forKey: keyPath)
             setValue(color, forKey: keyPath)
         }
@@ -216,9 +216,9 @@ open class FlatButton: NSButton, CALayerDelegate {
             break
         case .imageLeft:
             titleRect.origin.y = round((bounds.height - titleSize.height)/2)
-            titleRect.origin.x = bounds.width - titleSize.width - 6
+            titleRect.origin.x = bounds.midX + 2
             imageRect.origin.y = round((bounds.height - imageRect.height)/2)
-            imageRect.origin.x = hSpacing
+            imageRect.origin.x = bounds.midX - imageRect.width - 2
             break
         case .imageRight:
             titleRect.origin.y = round((bounds.height - titleSize.height)/2)
@@ -368,7 +368,7 @@ open class FlatButton: NSButton, CALayerDelegate {
         }
     }
     
-    open func layer(_ layer: CALayer, shouldInheritContentsScale newScale: CGFloat, from window: NSWindow) -> Bool {
+    override open func layer(_ layer: CALayer, shouldInheritContentsScale newScale: CGFloat, from window: NSWindow) -> Bool {
         return true
     }
     

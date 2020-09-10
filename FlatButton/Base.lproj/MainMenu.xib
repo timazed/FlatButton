@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -628,7 +629,7 @@
                             <menuItem title="Show Sidebar" keyEquivalent="s" id="kIP-vf-haE">
                                 <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                 <connections>
-                                    <action selector="toggleSourceList:" target="-1" id="iwa-gc-5KM"/>
+                                    <action selector="toggleSidebar:" target="-1" id="iwa-gc-5KM"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
@@ -679,21 +680,24 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="" animationBehavior="default" id="tD6-EV-c5k">
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="" animationBehavior="default" id="tD6-EV-c5k">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="283" y="305" width="480" height="270"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="3008" height="1669"/>
             <view key="contentView" id="jY5-DV-w6y">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button identifier="Trim" verticalHuggingPriority="750" fixedFrame="YES" tag="2" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nbi-nY-6DS" customClass="FlatButton" customModule="FlatButton_Example" customModuleProvider="target">
-                        <rect key="frame" x="208" y="132" width="65" height="50"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="square" title="Trim" bezelStyle="shadowlessSquare" image="trim" imagePosition="above" alignment="center" alternateImage="trim" state="on" inset="2" id="5JA-u0-aPs">
+                    <button identifier="Trim" verticalHuggingPriority="750" tag="2" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nbi-nY-6DS" customClass="FlatButton" customModule="FlatButton_Example" customModuleProvider="target">
+                        <rect key="frame" x="191" y="110" width="99" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="u9e-t7-uRa"/>
+                            <constraint firstAttribute="width" constant="99" id="zeu-GX-ojb"/>
+                        </constraints>
+                        <buttonCell key="cell" type="square" title="Trim" bezelStyle="shadowlessSquare" image="trim" imagePosition="leading" alignment="center" alternateImage="trim" state="on" inset="2" id="5JA-u0-aPs">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" metaFont="controlContent" size="11"/>
                         </buttonCell>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="momentary" value="NO"/>
@@ -730,6 +734,10 @@
                         </userDefinedRuntimeAttributes>
                     </button>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="Nbi-nY-6DS" firstAttribute="centerX" secondItem="jY5-DV-w6y" secondAttribute="centerX" id="Is8-NM-RAP"/>
+                    <constraint firstItem="Nbi-nY-6DS" firstAttribute="centerY" secondItem="jY5-DV-w6y" secondAttribute="centerY" id="SU1-AM-238"/>
+                </constraints>
             </view>
             <point key="canvasLocation" x="309" y="-505"/>
         </window>
